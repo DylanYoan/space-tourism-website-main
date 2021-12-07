@@ -36,6 +36,16 @@ body {
 
 }
 
+@media only screen and (max-width: 425px) {
+  body {
+    background-image: url("file:///C:/Users/USER/Documents/Practicas/space-tourism-website-main/starter-code/assets/home/background-home-mobile.jpg");
+
+    background-size: cover;
+  }
+
+  
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -124,8 +134,9 @@ body {
 
 .nav__logo {
   display: block;
-  margin: 65px;
-  float: left;
+  position: absolute;
+  margin-top: 65px;
+  margin-left: 3rem;
   z-index: 10;
 }
 
@@ -176,6 +187,12 @@ li.active {
 }
 
 nav #icon {
+  color: var(--titles-color);
+  font-size: 40px;
+  float: right;
+  margin-top: 4rem;
+  margin-left: 110%;
+  cursor: pointer;
   display: none;
 }
 
@@ -193,12 +210,12 @@ nav #icon {
 @media only screen and (max-width: 768px) {
   .nav__item {
     letter-spacing: none;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: .5rem;
   }
 
   .nav__list {
-    width: 70%;
+    width: 80%;
   }
 
   .hr {
@@ -208,15 +225,41 @@ nav #icon {
   nav #icon {
     display: none;
   }
+
+  span {
+    margin-right: 2px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .nav__list {
+    display: none;
+    width: 100%;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  nav #icon {
+    display: flex;
+  }
+
+  
+}
+
+@media only screen and (max-width: 425px) {
+  nav #icon {
+    margin-left: 80%;
+  }
 }
 
 /* Main */
 
 #main {
   position: absolute;
-  width: 30rem;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  width: 30rem;
   height: 25rem;
-  margin-top: 8rem;
+  margin-top: 15rem;
   margin-left: 17rem;
 }
 
@@ -246,10 +289,10 @@ p {
   line-height: 35px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1100px) {
   #main {
     margin-top: 2rem;
-    margin-left: 10rem;
+    margin-left: 25%;
     align-items: center;
     justify-content: center;
   
@@ -277,14 +320,51 @@ p {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  #main {
+    margin-top: 1rem;
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #main {
+    margin-top: 2rem;
+    width: 15rem;
+  }
+
+  h1 {
+    margin-left: 5%;
+    font-size: 100px;
+    height: 150px;
+  }
+
+  .main__h2 {
+    margin-top: 1rem;
+    margin-left: -13%;
+    height: 30px;
+    width: 20rem;
+    font-size: 16px;
+    letter-spacing: none;
+    line-height: none;
+  }
+
+  .main__p {
+    font-size: 18px;
+    margin-left: -20%;
+    width: 150%;
+    letter-spacing: none;
+    line-height: 30px;
+  }
+}
 /* Button */
 
 .container__btn {
   position: relative;
   width: 15rem;
   height: 15rem;
-  margin-top: 12rem;
-  margin-left: 75rem;
+  margin-top: 20rem;
+  margin-left: 65%;
 }
 
 .main__btn {
@@ -296,12 +376,52 @@ p {
   font-size: var(--typography-h4);
   text-transform: uppercase;
   letter-spacing: 2.7pt;
-  box-shadow: 5px 5px 60px 4px black;
+  box-shadow: 5px 5px 180px 5px black;
+}
+
+.main__btn:hover {
+  box-shadow: 20px 20px 150px 100px black;
+  transition: .5s ease-in-out;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container__btn {
+    margin-left: 70%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container__btn {
+    margin-top: 35rem;
+    margin-left: 35%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .container__btn {
-    margin-top: 35rem;
-    margin-left: 12rem;
+    margin-top: 32rem;
+    margin-left: 35%;
+    width: 10rem;
+    height: 10rem;
   }
+
+  .main__btn {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .container__btn {
+    margin-top: 26rem;
+    margin-left: 30%;
+  }
+
+  .main__btn {
+    width: 10rem;
+    height: 10rem;
+    font-size: 22px;
+  }
+
+
 }
