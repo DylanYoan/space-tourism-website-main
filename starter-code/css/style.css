@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Bellefair&display=swap');
+/* Variables */
+
+:root {
+    --main-color: #0b0d17;
+    --white-color: #d0d6f9;
+    --titles-color: #ffffff;
+
+    --typography-h1: 150px; 
+    --typography-h2: 100px;
+    --typography-h3: 56px;
+    --typography-h4: 32px;
+    --typography-h5: 28px;
+    --typography-subh1: 28px;
+    --typography-subh2: 14px;
+    --typography-nav: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-image: url("file:///C:/Users/USER/Documents/Practicas/space-tourism-website-main/starter-code/assets/home/background-home-desktop-1444.jpg");
+  color: var(--white-color);
+  font-family: 'Bellefair', serif;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url("file:///C:/Users/USER/Documents/Practicas/space-tourism-website-main/starter-code/assets/home/background-home-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  h1,h2,h3,h4{
+    color: var(--titles-color);
+  }
+  
+  ul{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button,
+  input{
+    border: none;
+    outline: none;
+  }
+  
+  button{
+    cursor: pointer;
+  }
+  
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  .section{
+    padding: 4.5rem 0 2rem;
+  }
+  
+  .section__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+  }
+  
+  /*=============== LAYOUT ===============*/
+  .container{
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+  
+  .grid{
+    display: grid;
+  }
+  
+  .main{
+    overflow: hidden; /*For animation*/
+  }
+  
+  /*=============== HEADER ===============*/
+  .header {
+    width: 100%;
+    background: var(--body-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+  }
+
+/* Header */
+
+.nav {
+  position: relative;
+  display: flex;
+  z-index: 11;
+}
+
+.nav__logo {
+  display: block;
+  margin: 65px;
+  float: left;
+  z-index: 10;
+}
+
+.nav__item {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 2rem;
+  font-size: var(--typography-nav);
+  text-transform: uppercase;
+  letter-spacing: 2.7pt;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.nav__link {
+  color: var(--titles-color);
+}
+
+.nav__link:hover {
+  border-bottom: solid 3px gray;
+  padding-bottom: 2rem;
+}
+
+li.active {
+  border-bottom: solid 3px var(--titles-color);
+  padding-bottom: 2rem;
+}
+
+.nav__list {
+  display: flex;
+  position: absolute;
+  margin-top: 3rem;
+  right: 0;
+  width: 780px;
+  height: 5.5rem;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hr {
+  display: flex;
+  position: inherit;
+  height: .5px;
+  width: 30vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 2.6rem;
+  margin-left: -28.7vw;
+}
+
+nav #icon {
+  display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+  .hr {
+    width: 20vw;
+    margin-left: -18vw;
+  }
+
+  nav #icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav__item {
+    letter-spacing: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .nav__list {
+    width: 70%;
+  }
+
+  .hr {
+    display: none;
+  }
+
+  nav #icon {
+    display: none;
+  }
+}
+
+/* Main */
+
+#main {
+  position: absolute;
+  width: 30rem;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  height: 25rem;
+  margin-top: 8rem;
+  margin-left: 17rem;
+}
+
+.main__h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: var(--typography-h5);
+  color: var(--white-color);
+  letter-spacing: 4.75pt;
+  text-transform: uppercase;
+  line-height: 90px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+h1 {
+  font-size: var(--typography-h1);
+  color: var(--titles-color);
+  font-family: 'Bellefair', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 200px;
+}
+
+p {
+  font-size: 22px;
+  line-height: 35px;
+}
+
+@media only screen and (max-width: 768px) {
+  #main {
+    margin-top: 2rem;
+    margin-left: 10rem;
+    align-items: center;
+    justify-content: center;
+  
+  }
+
+  .main__h2 {
+    font-size: 20px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main__p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Button */
+
+.container__btn {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 12rem;
+  margin-left: 75rem;
+}
+
+.main__btn {
+  width: 18rem;
+  height: 18rem;
+  background-color: var(--titles-color);
+  border-radius: 50%;
+  font-family: 'Bellefair', sans-serif;
+  font-size: var(--typography-h4);
+  text-transform: uppercase;
+  letter-spacing: 2.7pt;
+  box-shadow: 5px 5px 60px 4px black;
+}
+
+@media only screen and (max-width: 768px) {
+  .container__btn {
+    margin-top: 35rem;
+    margin-left: 12rem;
+  }
+}
