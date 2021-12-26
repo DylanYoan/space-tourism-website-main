@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Bellefair&display=swap');
+/* Variables */
+
+:root {
+    --main-color: #0b0d17;
+    --white-color: #d0d6f9;
+    --titles-color: #ffffff;
+
+    --typography-h1: 150px; 
+    --typography-h2: 100px;
+    --typography-h3: 56px;
+    --typography-h4: 32px;
+    --typography-h5: 28px;
+    --typography-subh1: 28px;
+    --typography-subh2: 14px;
+    --typography-nav: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
+  color: var(--white-color);
+  font-family: 'Bellefair', serif;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
+
+    background-size: cover;
+  }
+
+  
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  h1,h2,h3,h4{
+    color: var(--titles-color);
+  }
+  
+  ul{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  button{
+    cursor: pointer;
+  }
+  
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  .section{
+    padding: 4.5rem 0 2rem;
+  }
+  
+  .section__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+  }
+
+ /*=============== HEADER ===============*/
+ .header {
+    width: 100%;
+    background: var(--body-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+  }
+
+/* Header */
+
+.nav {
+  position: relative;
+  display: flex;
+  z-index: 11;
+}
+
+.nav__logo {
+  display: block;
+  position: absolute;
+  margin-top: 65px;
+  margin-left: 3rem;
+  z-index: 10;
+}
+
+.nav__item {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 2rem;
+  font-size: var(--typography-nav);
+  text-transform: uppercase;
+  letter-spacing: 2.7pt;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.nav__link {
+  color: var(--titles-color);
+}
+
+.nav__link:hover {
+  border-bottom: solid 3px gray;
+  padding-bottom: 2rem;
+}
+
+li.active {
+  border-bottom: solid 3px var(--titles-color);
+  padding-bottom: 2rem;
+}
+
+.nav__list {
+  display: flex;
+  position: absolute;
+  margin-top: 3rem;
+  right: 0;
+  width: 780px;
+  height: 5.5rem;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hr {
+  display: flex;
+  position: inherit;
+  height: .5px;
+  width: 30vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 2.6rem;
+  margin-left: -28.7vw;
+}
+
+nav #icon {
+  color: var(--titles-color);
+  font-size: 40px;
+  float: right;
+  margin-top: 4rem;
+  margin-left: 110%;
+  cursor: pointer;
+  display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+  .hr {
+    width: 20vw;
+    margin-left: -18vw;
+  }
+
+  nav #icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav__item {
+    letter-spacing: none;
+    margin-left: 2rem;
+    margin-right: .5rem;
+  }
+
+  .nav__list {
+    width: 80%;
+  }
+
+  .hr {
+    display: none;
+  }
+
+  nav #icon {
+    display: none;
+  }
+
+  span {
+    margin-right: 2px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .nav__list {
+    display: none;
+    width: 100%;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  nav #icon {
+    display: flex;
+  }
+
+  
+}
+
+@media only screen and (max-width: 425px) {
+  nav #icon {
+    margin-left: 80%;
+  }
+}
+
+/* SLIDES */
+
+.main__h2 {
+    font-size: var(--typography-h4);
+    margin-top: 20vh;
+    margin-left: 10vw;
+    color: var(--titles-color);
+    text-transform: uppercase;
+    letter-spacing: 2pt;
+}
+
+.main__h2 span {
+    color: gray;
+}
+
+.role {
+    text-transform: uppercase;
+    margin-top: -40vh;
+    margin-left: 20vw;
+    font-size: var(--typography-h5);
+}
+
+.two__h2 {
+    text-transform: uppercase;
+    margin-top: 2vh;
+    margin-left: 20vw;
+    font-size: var(--typography-h3);
+}
+
+.main__p {
+    width: 25vw;
+    margin-top: 3vh;
+    margin-left: 20vw;
+    font-size: 20px;
+    letter-spacing: .5pt;
+    line-height: 20pt;
+    font-family: 'Barlow Condensed', sans-serif;
+
+}
+
+/* BUTTONS */
+
+button {
+    background: none;
+    display: flex;
+    color: var(--titles-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 4vh;
+    padding-top: 2vh;
+    font-size: 30px;
+    margin-left: 1vw;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+
+}
+  
+.container__btn {
+    height: 35vh;
+    margin-top: -40vh;
+    margin-left: 12vw;
+}
+  
+button:hover {
+    background-color: #fff;
+    color: gray;
+    transition: .5s ease-in-out;
+}
+
+
+
+/* IMAGES */
+
+.img__1 {
+    background-image: url('../assets/technology/image-launch-vehicle-portrait.jpg');
+    width: 515px;
+    height: 527px;
+    margin-left: 70vw;
+}
+
+.img__2 {
+    background-image: url('../assets/technology/image-spaceport-portrait.jpg');
+    width: 515px;
+    height: 527px;
+    margin-left: 70vw;
+
+}
+
+.img__3 {
+    background-image: url('../assets/technology/image-space-capsule-portrait.jpg');
+    width: 515px;
+    height: 527px;
+    margin-left: 70vw;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .img__1 {
+        background-image: url('../assets/technology/image-launch-vehicle-landscape.jpg');
+        width: 768px;
+        height: 310px;
+        margin-left: 0;
+    }
+    
+    .img__2 {
+        background-image: url('../assets/technology/image-spaceport-landscape.jpg');
+        width: 768px;
+        height: 310px;
+        margin-left: 0;
+
+    }
+    
+    .img__3 {
+        background-image: url('../assets/technology/image-space-capsule-landscape.jpg');
+        width: 768px;
+        height: 310px;
+        margin-left: 0;
+
+    }
+    
+}
