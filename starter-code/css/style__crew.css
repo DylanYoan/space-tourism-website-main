@@ -30,7 +30,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   body {
-    background-image: url("file:///C:/Users/USER/Documents/Practicas/space-tourism-website-main/starter-code/assets/crew/background-crew-tablet.jpg");
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     }
@@ -39,7 +39,7 @@ body {
 
 @media only screen and (max-width: 425px) {
   body {
-    background-image: url("file:///C:/Users/USER/Documents/Practicas/space-tourism-website-main/starter-code/assets/crew/background-crew-mobile.jpg");
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
 
     background-size: cover;
   }

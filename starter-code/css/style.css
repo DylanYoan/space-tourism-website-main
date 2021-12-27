@@ -40,7 +40,7 @@ body {
   body {
     background-image: url("../assets/home/background-home-mobile.jpg");
 
-    background-size: cover;
+    background-size: 100vh 100vw;
   }
 
   

@@ -62,11 +62,23 @@ button{
   
 
 body {
-  background-image: url("file:///C:/Users/USER/Documents/Practicas/space-tourism-website-main/starter-code/assets/destination/background-destination-desktop.jpg"); 
+  background-image: url("../assets/destination/background-destination-desktop.jpg"); 
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   font-family: 'Bellefair', serif;
 
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: ("../assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  body {
+    background-image: ("../assets/destination/background-destination-mobile.jpg");
+  }
 }
 
   /*=============== HEADER ===============*/
