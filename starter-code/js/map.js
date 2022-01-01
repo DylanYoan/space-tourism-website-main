@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', tryOne)
   const launchHtml4 = document.createElement('div');
   
   function tryOne() {
-    document.body.appendChild(launchHtml);
+    document.getElementById('main').appendChild(launchHtml);
     launchHtml.innerHTML = 
       `<div class="main__h2"><span>01</span>Pick your destination
     </div>
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', tryOne)
     <div class="img__moon">
       <img src="./assets/destination/image-moon.webp" alt="Moon">
     </div>
-  
+
       <div class="two__h2">
         <h2>Moon</h2>
       </div>
@@ -41,8 +41,7 @@ document.addEventListener('DOMContentLoaded', tryOne)
   
         <div class="p_3">Est. travel time</div>
         <h3>3 days</h3>
-      </div>
-    </div>`;
+      </div>`;
 
     launchHtml2.remove();
     launchHtml3.remove();
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded', tryOne)
   
   
   function tryTwo() {
-    document.body.appendChild(launchHtml2);
+    document.getElementById('main').appendChild(launchHtml2);
     launchHtml2.innerHTML = `<div class="main__h2"><span>01</span>Pick your destination
     </div>
   
@@ -88,7 +87,7 @@ document.addEventListener('DOMContentLoaded', tryOne)
   
   
   function tryThree() {
-    document.body.appendChild(launchHtml3);
+    document.getElementById('main').appendChild(launchHtml3);
     launchHtml3.innerHTML = `<div class="main__h2"><span>01</span>Pick your destination
     </div>
   
@@ -122,7 +121,7 @@ document.addEventListener('DOMContentLoaded', tryOne)
   
   
   function tryFour() {
-    document.body.appendChild(launchHtml4);
+    document.getElementById('main').appendChild(launchHtml4);
     launchHtml4.innerHTML = `<div class="main__h2"><span>01</span>Pick your destination
     </div>
   
