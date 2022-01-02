@@ -26,13 +26,14 @@ body {
   color: var(--white-color);
   font-family: 'Bellefair', serif;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 768px) {
   body {
     background-image: url("../assets/technology/background-technology-tablet.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+
     }
 
 }
@@ -40,7 +41,7 @@ body {
 @media only screen and (max-width: 479px) {
   body {
     background-image: url("../assets/technology/background-technology-mobile.jpg");
-
+ 
     background-size: cover;
   }
 
@@ -230,6 +231,7 @@ nav #icon {
 
 @media only screen and (max-width: 425px) {
   nav #icon {
+    display: flex;
     margin-left: 80%;
   }
 }
@@ -306,6 +308,67 @@ button:hover {
     transition: .5s ease-in-out;
 }
 
+@media only screen and (max-width: 768px) {
+  .main__h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-left: 5%;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  .container__btn {
+    margin-top: -38%;
+    margin-left: 5%;
+  }
+
+  .role {
+    margin-top: 5%;
+  }
+
+  .two__h2 {
+    font-size: 40px;;
+  }
+
+  .main__p {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .main__h2 {
+    margin-top: 12%;
+  }
+
+  .role {
+    margin-top: -20%;
+    font-size: 20px;
+  }
+
+  .two__h2 {
+    font-size: 30px;
+    margin-left: 10%;
+  }
+
+  .main__p {
+    font-size: 15px;
+    width: 300px;
+  }
+
+  button {
+    display: inline-flex;
+  }
+
+  .container__btn {
+    margin-top: 0;
+    margin-left: 30%;
+  }
+}
 
 
 /* IMAGES */
@@ -357,4 +420,29 @@ button:hover {
 
     }
     
+}
+
+@media only screen and (max-width: 425px) {
+  .img__1 {
+    background-image: url('../assets/technology/image-launch-vehicle-landscape.jpg');
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    margin-left: 0;
+}
+
+.img__2 {
+    background-image: url('../assets/technology/image-spaceport-landscape.jpg');
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    margin-left: 0;
+
+}
+
+.img__3 {
+    background-image: url('../assets/technology/image-space-capsule-landscape.jpg');
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    margin-left: 0;
+
+}
 }
