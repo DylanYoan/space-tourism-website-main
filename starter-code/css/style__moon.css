@@ -211,6 +211,11 @@ nav #icon {
 
 /* Buttons */
 
+button.active2 {
+  border-bottom: 3px solid var(--titles-color);
+  padding: 4px;
+}
+
 .container__btn {
   width: 400px;
   padding: 10px;

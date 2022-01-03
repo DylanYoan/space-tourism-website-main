@@ -292,6 +292,10 @@ nav #icon {
 
 /* Buttons */
 
+button.active2 {
+  background-color: var(--titles-color);
+}
+
 button {
   background-color: gray;
   width: 15px;

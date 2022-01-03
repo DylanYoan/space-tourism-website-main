@@ -278,6 +278,11 @@ nav #icon {
 
 /* BUTTONS */
 
+button.active2 {
+  background-color: var(--titles-color);
+  color: gray;
+}
+
 button {
     background: none;
     display: flex;
